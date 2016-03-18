@@ -11,7 +11,7 @@ def create_text_file( folder ):
        from folder you are outtputting from.
     '''
     path = folder
-    files = os.list( path )
+    files = os.listdir( path )
 
     text_file_name = input('text file name ')
     print('creating text file..')
@@ -19,3 +19,8 @@ def create_text_file( folder ):
     for filenames in files:
         if filenames.startswith('.'):
             continue                   # skip directories
+        file_names = text_file.write(filenames)
+        line_space = text_file.write('\n')
+        text_file.close
+
+create_text_file( 'c:\\users\\mjwil\\documents\\github\\python\\createfile')
