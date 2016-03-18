@@ -6,8 +6,10 @@
 # version: 0.5
 import os,sys
 
-def create_text_file( items ):
+def create_text_file( text_file ):
     '''creates text file for list of items
        from folder you are outtputting from.
     '''
     text_file_name = input('text file name ')
+    text_file = open(text_file_name, 'w') # creates text_file_name and writes to text_file
+    
